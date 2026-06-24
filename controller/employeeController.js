@@ -1,10 +1,6 @@
  const data=require('../db.json');
 
 
-//  get all employee
- const getAllEmp=(req,res)=>{
-    res.json(data.employees);
- };
 
 //  post employee or add
 const addEmp=(req,res)=>{
@@ -46,6 +42,18 @@ const removeEmp=(req,res)=>{
         res.status(200).json("Employee Deleted Successfully")
     } catch (error) {
         res.status(500).json(error)
+    }
+}
+
+const getAllEmp=(req,res)=>{
+    const searchText=req.query.search
+    if(searchText){
+       const result= data.employees.filter(emp=>emp.name.toLowerCase().includes(searchText.toLowerCase()))
+       res.json(result)
+        
+    }
+    else{
+        res.json(data.employees)
     }
 }
 

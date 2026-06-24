@@ -1,5 +1,5 @@
 const express=require('express')
-const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp } = require('./controller/employeeController')
+const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp} = require('./controller/employeeController')
 const router=express.Router()
 
 // get all employee
