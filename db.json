@@ -1,0 +1,55 @@
+{
+    "employees":[
+        {
+            "id":1,
+            "name":"Arun Kumar",
+            "email":"arun@gmail.com",
+            "phone":"98636378109",
+            "department":"IT",
+            "designation":"Software Engineer",
+            "salary":45000,
+            "location":"Kochi"
+        },
+        {
+            "id":2,
+            "name":"Anjali Nair",
+            "email":"anjali@gmail.com",
+            "phone":"7237826263",
+            "department":"HR",
+            "designation":"HR Executive",
+            "salary":35000,
+            "location":"Trivandrum"
+        },
+        {
+            "id":3,
+            "name":"Rahul Menon",
+            "email":"rahul@gmail.com",
+            "phone":"7327817613",
+            "department":"Finance",
+            "designation":"Accountant",
+            "salary":40000,
+            "location":"Calicut"
+        },
+        {
+            "id":4,
+            "name":"Sneha Thomas",
+            "email":"sneha@gmail.com",
+            "phone":"9843877218",
+            "department":"Marketing",
+            "designation":"Marketing Executive",
+            "salary":38000,
+            "location":"Kochi"
+        },
+        {
+            "id":5,
+            "name":"Vishnu Raj",
+            "email":"vishnu@gmail.com",
+            "phone":"8263817615",
+            "department":"IT",
+            "designation":"Frontend Developer",
+            "salary":50000,
+            "location":"Kannur"
+        }
+        
+    ]
+}
