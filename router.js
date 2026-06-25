@@ -1,5 +1,5 @@
 const express=require('express')
-const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp} = require('./controller/employeeController')
+const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp, paginationController} = require('./controller/employeeController')
 const router=express.Router()
 
 // get all employee
@@ -16,5 +16,8 @@ router.put('/update-emp/:id',updateEmp)
 
 // delete employee
 router.delete('/remove-emp/:id',removeEmp)
+
+// pagination
+router.get('/pagination',paginationController)
 
 module.exports=router

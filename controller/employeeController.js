@@ -44,7 +44,7 @@ const removeEmp=(req,res)=>{
         res.status(500).json(error)
     }
 }
-
+// get all employee or seacrh employee
 const getAllEmp=(req,res)=>{
     const searchText=req.query.search
     if(searchText){
@@ -57,4 +57,14 @@ const getAllEmp=(req,res)=>{
     }
 }
 
- module.exports={getAllEmp,addEmp,getEmpDetails,updateEmp,removeEmp}
+// server side pagination 
+const paginationController=(req,res)=>{
+    const page=parseInt(req.query.page);
+    const limit=parseInt(req.query.limit);
+    const start=(page-1)*limit;
+    const end=start+limit;
+    const result=data.employees.slice(start,end);
+    res.json({total:data.employees.length,data:result})
+}
+
+ module.exports={getAllEmp,addEmp,getEmpDetails,updateEmp,removeEmp,paginationController}
