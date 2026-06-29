@@ -1,5 +1,5 @@
 const express=require('express')
-const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp, paginationController} = require('./controller/employeeController')
+const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp, paginationController, importEmployeeController} = require('./controller/employeeController')
 const router=express.Router()
 
 // get all employee
@@ -19,5 +19,8 @@ router.delete('/remove-emp/:id',removeEmp)
 
 // pagination
 router.get('/pagination',paginationController)
+
+// import excel file
+router.post('/import-excel',importEmployeeController)
 
 module.exports=router
