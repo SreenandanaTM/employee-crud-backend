@@ -1,7 +1,5 @@
  const data=require('../db.json');
 
-
-
 //  post employee or add
 const addEmp=(req,res)=>{
     try {
@@ -44,7 +42,7 @@ const removeEmp=(req,res)=>{
         res.status(500).json(error)
     }
 }
-// get all employee or seacrh employee
+// get all employee or server side seacrh employee
 const getAllEmp=(req,res)=>{
     const searchText=req.query.search
     if(searchText){
@@ -52,9 +50,7 @@ const getAllEmp=(req,res)=>{
        res.json(result)
         
     }
-    else{
-        res.json(data.employees)
-    }
+    
 }
 
 // server side pagination 
