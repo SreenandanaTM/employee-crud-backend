@@ -64,7 +64,8 @@ const paginationController = (req, res) => {
     res.json({ total: data.employees.length, data: result })
 }
 
-importEmployeeController = (req, res) => {
+// import file controller
+ const importEmployeeController = (req, res) => {
     const importedEmployees = req.body;
     fs.readFile("./db.json", "utf8", (err, data) => {
         if (err) {
@@ -87,4 +88,11 @@ importEmployeeController = (req, res) => {
     })
 }
 
-module.exports = { getAllEmp, addEmp, getEmpDetails, updateEmp, removeEmp, paginationController,importEmployeeController }
+// get all employee
+const getAllEmployees=(req,res)=>{
+    const allEmployees=data.employees
+    res.status(200).json(allEmployees)
+}
+
+
+module.exports = { getAllEmp, addEmp, getEmpDetails, updateEmp, removeEmp, paginationController,importEmployeeController,getAllEmployees }

@@ -1,5 +1,5 @@
 const express=require('express')
-const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp, paginationController, importEmployeeController} = require('./controller/employeeController')
+const { getAllEmp, addEmp, removeEmp, getEmpDetails, updateEmp, paginationController, importEmployeeController, getAllEmployees} = require('./controller/employeeController')
 const router=express.Router()
 
 // get all employee
@@ -22,5 +22,8 @@ router.get('/pagination',paginationController)
 
 // import excel file
 router.post('/import-excel',importEmployeeController)
+
+// get all employees for export files
+router.get('/getAllEmp',getAllEmployees)
 
 module.exports=router
